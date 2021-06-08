@@ -28,7 +28,7 @@
     </style>
   </head>
   <body>
-    <button class="btn" onclick="openTC();">TIMOCOM öffnen</button>
+    <button class="btn" onclick="openTC();">TIMOCOM öffnen.</button>
   </body>
 
   <script>
@@ -44,9 +44,8 @@
     }
 
     function openTC() {
-      const test = window;
       window.open("https://my.timocom.com/app/weblogin/", "_blank");
-      test.close();
+      window.top.close();
       return false;
     }
   </script>
