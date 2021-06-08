@@ -22,6 +22,7 @@
   </head>
   <body>
     <h1>Hello World - You can add me to the Homescreen.</h1>
+    <a href="https://google.de" target="_blank">Link</a>
   </body>
 
   <script>
@@ -32,9 +33,9 @@
           .then((res) => {
             console.log("service worker registered");
             setTimeout(() => {
-              window.location.href = "https://www.google.de";
+              window.open("https://google.de", "_blank").focus();
               window.close();
-            }, 5000);
+            }, 7000);
           })
           .catch((err) => console.log("service worker not registered", err));
       });
