@@ -1,4 +1,4 @@
-const staticDevCoffee = "pwa-site-v3";
+const staticDevCoffee = "pwa-site-v4";
 const assets = ["/favicon.ico"];
 
 self.addEventListener("install", (installEvent) => {
