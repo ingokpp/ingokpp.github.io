@@ -32,7 +32,7 @@
           .then((res) => {
             console.log("service worker registered");
             setTimeout(() => {
-              window.location.href("https://www.google.de");
+              window.location.href = "https://www.google.de";
               window.close();
             }, 5000);
           })
