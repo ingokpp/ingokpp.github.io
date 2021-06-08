@@ -22,7 +22,7 @@
   </head>
   <body>
     <h1>Hello World - You can add me to the Homescreen.</h1>
-    <a href="https://google.de" target="_blank">Link</a>
+    <a href="https://bing.de" target="_blank">Link</a>
   </body>
 
   <script>
@@ -35,10 +35,12 @@
             setTimeout(() => {
               Object.assign(document.createElement("a"), {
                 target: "_blank",
-                href: "https://google.de",
+                href: "https://timocom.de",
               }).click();
-              window.close();
-            }, 7000);
+              setTimeout(() => {
+                window.close();
+              }, 5000);
+            }, 1000);
           })
           .catch((err) => console.log("service worker not registered", err));
       });
