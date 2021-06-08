@@ -6,6 +6,7 @@
   "background_color": "#fdfdfd",
   "theme_color": "#db4938",
   "orientation": "portrait-primary",
+  "scope": "/app/",
   "icons": [
     {
       "src": "/images/icons/icon-72x72.png",
