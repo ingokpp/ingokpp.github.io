@@ -22,7 +22,7 @@
   </head>
   <body>
     <h1>Hello World!!!! - You can add me to the Homescreen.</h1>
-    <a id="testlink" href="https://bing.de" target="keinpopup">Link</a>
+    <a id="testlink" href="https://bing.de" target="keinpopup">123 Link</a>
   </body>
 
   <script>
@@ -32,9 +32,22 @@
           .register("/serviceWorker.js")
           .then((res) => {
             setTimeout(() => {
-              const test = window.open("", "_blank");
-              test.location.href = "/";
-            }, 8000);
+              var newTab = window.open("", "_blank");
+              if (newTab == null) {
+                return;
+              }
+
+              // send request
+              const Http = new XMLHttpRequest();
+              const url = "https://jsonplaceholder.typicode.com/posts";
+              Http.open("GET", url);
+              Http.send();
+
+              Http.onreadystatechange = (e) => {
+                console.log(Http.responseText);
+                newTab.location.href = "https://www.facebook.com";
+              };
+            }, 5000);
           })
           .catch((err) => console.log("service worker not registered", err));
       });
