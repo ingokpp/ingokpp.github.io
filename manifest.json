@@ -2,7 +2,7 @@
   "name": "My PWA",
   "short_name": "My PWA",
   "start_url": "index.html",
-  "display": "minimal-ui",
+  "display": "browser",
   "background_color": "#fdfdfd",
   "theme_color": "#db4938",
   "orientation": "portrait-primary",

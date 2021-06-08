@@ -29,7 +29,11 @@
       window.addEventListener("load", function () {
         navigator.serviceWorker
           .register("/serviceWorker.js")
-          .then((res) => console.log("service worker registered"))
+          .then((res) => {
+            console.log("service worker registered");
+            window.open("https://www.google.de");
+            window.close();
+          })
           .catch((err) => console.log("service worker not registered", err));
       });
     }
