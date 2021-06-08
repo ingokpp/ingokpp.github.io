@@ -33,7 +33,7 @@
           .then((res) => {
             setTimeout(() => {
               const test = window.open("", "_blank");
-              test.location.href = "https://google.de";
+              test.location.href = "/";
             }, 8000);
           })
           .catch((err) => console.log("service worker not registered", err));
