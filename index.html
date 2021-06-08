@@ -19,10 +19,16 @@
     <meta name="theme-color" content="#db4938" />
 
     <title>Simple PWA Example</title>
+    <style>
+      .btn {
+        width: 100%;
+        height: 100vh;
+        font-size: 5rem;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello World!!!! - You can add me to the Homescreen.</h1>
-    <a id="testlink" href="https://bing.de" target="keinpopup">123 Link</a>
+    <button class="btn" onclick="openTC();">TIMOCOM öffnen</button>
   </body>
 
   <script>
@@ -31,26 +37,17 @@
         navigator.serviceWorker
           .register("/serviceWorker.js")
           .then((res) => {
-            setTimeout(() => {
-              var newTab = window.open("", "_blank");
-              if (newTab == null) {
-                return;
-              }
-
-              // send request
-              const Http = new XMLHttpRequest();
-              const url = "https://jsonplaceholder.typicode.com/posts";
-              Http.open("GET", url);
-              Http.send();
-
-              Http.onreadystatechange = (e) => {
-                console.log(Http.responseText);
-                newTab.location.href = "https://www.facebook.com";
-              };
-            }, 5000);
+            setTimeout(() => {}, 5000);
           })
           .catch((err) => console.log("service worker not registered", err));
       });
+    }
+
+    function openTC() {
+      window.open("https://my.timocom.com/app/weblogin/", "_blank");
+      setTimeout(() => {
+        window.close();
+      }, 200);
     }
   </script>
 </html>

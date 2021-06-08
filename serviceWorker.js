@@ -1,4 +1,4 @@
-const staticDevCoffee = "pwa-site-v2";
+const staticDevCoffee = "pwa-site-v3";
 const assets = ["/", "/index.html"];
 
 self.addEventListener("install", (installEvent) => {
