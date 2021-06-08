@@ -1,12 +1,11 @@
 {
-  "name": "My PWA",
-  "short_name": "My PWA",
+  "name": "TIMOCOM",
+  "short_name": "TIMOCOM",
   "start_url": "index.html",
-  "display": "minimal-ui",
+  "display": "fullscreen",
   "background_color": "#fdfdfd",
-  "theme_color": "#db4938",
+  "theme_color": "#0069b4",
   "orientation": "portrait-primary",
-  "scope": "/app/",
   "icons": [
     {
       "src": "/images/icons/icon-72x72.png",

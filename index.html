@@ -18,7 +18,7 @@
     <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
     <meta name="theme-color" content="#db4938" />
 
-    <title>Simple PWA Example</title>
+    <title>TIMOCOM</title>
     <style>
       .btn {
         width: 100%;
@@ -37,7 +37,7 @@
         navigator.serviceWorker
           .register("/serviceWorker.js")
           .then((res) => {
-            setTimeout(() => {}, 5000);
+            console.log("serviceWorker registered");
           })
           .catch((err) => console.log("service worker not registered", err));
       });
@@ -45,9 +45,8 @@
 
     function openTC() {
       window.open("https://my.timocom.com/app/weblogin/", "_blank");
-      setTimeout(() => {
-        window.close();
-      }, 200);
+      window.close();
+      return false;
     }
   </script>
 </html>
