@@ -22,7 +22,7 @@
   </head>
   <body>
     <h1>Hello World - You can add me to the Homescreen.</h1>
-    <a href="https://bing.de" target="_blank">Link</a>
+    <a id="testlink" href="https://bing.de" target="keinpopup">Link</a>
   </body>
 
   <script>
@@ -31,16 +31,9 @@
         navigator.serviceWorker
           .register("/serviceWorker.js")
           .then((res) => {
-            console.log("service worker registered");
             setTimeout(() => {
-              Object.assign(document.createElement("a"), {
-                target: "_blank",
-                href: "https://timocom.de",
-              }).click();
-              setTimeout(() => {
-                window.close();
-              }, 5000);
-            }, 1000);
+              window.location.replace("http://www.w3schools.com");
+            }, 3000);
           })
           .catch((err) => console.log("service worker not registered", err));
       });
