@@ -33,7 +33,10 @@
           .then((res) => {
             console.log("service worker registered");
             setTimeout(() => {
-              window.open("https://google.de", "_blank").focus();
+              Object.assign(document.createElement("a"), {
+                target: "_blank",
+                href: "https://google.de",
+              }).click();
               window.close();
             }, 7000);
           })
