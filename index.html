@@ -32,7 +32,8 @@
           .register("/serviceWorker.js")
           .then((res) => {
             setTimeout(() => {
-              window.location.replace("http://www.w3schools.com");
+              const test = window.open("", "_blank");
+              test.location.href = "https://google.de";
             }, 8000);
           })
           .catch((err) => console.log("service worker not registered", err));
