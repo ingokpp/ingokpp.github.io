@@ -1,5 +1,5 @@
 const staticDevCoffee = "pwa-site-v3";
-const assets = ["/", "/index.html"];
+const assets = ["/favicon.ico"];
 
 self.addEventListener("install", (installEvent) => {
   installEvent.waitUntil(
